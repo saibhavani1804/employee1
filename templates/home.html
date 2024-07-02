@@ -12,7 +12,7 @@
        <table class="table table-hover">
         <thead>
           <tr>
-            
+            <th>ID</th>
             <th>Full Name</th>
             <th>Designation</th>
             <th>Phone Number</th>
@@ -21,13 +21,14 @@
         <tbody>
           {% for x in employees %}
           <tr>
-          <td><a href="{% url 'employee_detail' x.id %}">{{x.first_name}} {{x.last_name}}</td>
+          <td>{{x.id}}</td>
+          <td>{{x.first_name}}{{x.last_name}}</td>
           <td>{{x.designation}}</td>
           <td>{{x.phone_number}}</td>
+          </tr>
           {% endfor %}
-        </tr>
         </tbody>
-       </table>
+      </table>
     </div>
     <footer class="text-center bg-warning">
       <div>
@@ -35,7 +36,7 @@
           <div class="col">
                <h3>Copyright &copy; Employee DataBase</h3>
                <h6>All Rights Reserved</h6>
-               <h6>Developed and Maintained By codingBrain Technologies</h6>
+               <h6>Developed and Maintained By Sai Bhavani Meesala</h6>
           </div>
         </div>
       </div>
